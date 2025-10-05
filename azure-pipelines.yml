@@ -10,7 +10,7 @@ jobs:
 - job: test
 steps:
 - script: echo testing app
- 
+
 - stage: DeployUS1
 dependsOn: Test # this stage runs after Test
 jobs:
@@ -25,7 +25,7 @@ jobs:
 steps:
 - script: echo deploying to US2
  
-- stage: DeployEurope
+stage: DeployEurope
 dependsOn: # this stage runs after DeployUS1 and DeployUS2
 - DeployUS1
 - DeployUS2
